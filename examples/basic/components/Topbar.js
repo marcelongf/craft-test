@@ -121,6 +121,7 @@ export const Topbar = () => {
                 onClick={() => {
                   setDialogOpen(false);
                   const json = lz.decompress(lz.decodeBase64(stateToLoad));
+                  console.log(json);
                   actions.deserialize(json);
                   setSnackbarMessage('State loaded');
                 }}
